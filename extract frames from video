@@ -1,0 +1,21 @@
+ffmpeg command line code
+check if ffmpeg is working in cmd with: > ffmpeg
+make sure to change your directory to a new folder titled after your project, for this purpose my folder was called "cdog"
+My cmd looks like: 
+
+C:\Users\me\Desktop\cdog>
+
+the video file i am extracting from is in "cdog" and is named, "claramotiontrack.m4v"
+
+After running the following line in cmd, each image saves and renames itself in numerical order within "cdog"
+
+=========
+
+ffmpeg -i claramotiontrack.m4v -r 1/1 cdog%0d.png
+
+======
+
+ffmpeg -i file.mpg -r 1/1 $filename%03d.jpg
+
+# for longer videos this conversion will take longer, it is recommended that you use .png for image saves because it is lossless
+#documentation -> https://stackoverflow.com/questions/10957412/fastest-way-to-extract-frames-using-ffmpeg
